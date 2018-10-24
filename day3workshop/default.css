@@ -2,6 +2,10 @@ img {
 	display: inline-block;
 }
 
+h1 {
+	text-align: center;
+}
+
 @keyframes fadeIn {
 	0% {
 		opacity: 0;
@@ -13,25 +17,29 @@ img {
 }
 
 #row1 {
+	width: 100%;
 	opacity: 0;
 	animation: fadeIn 3s forwards;
 }
 
 #row2 {
+	width: 100%;
 	animation: fadeIn 6s forwards;
  }
 
 #row3 {
+	width: 100%;
 	animation: fadeIn 9s forwards;
 }
 
 #row4 {
+	width: 100%;
 	animation: fadeIn 12s forwards;
 
 }
 
 #container {
-	width: 350px;
+	width: 650px;
 	margin: 0 auto;
 }
 
@@ -44,14 +52,14 @@ img {
 
 	100% {
 		transform: rotate(360deg);
-		height: 100px;
+		height: 200px;
 		width: auto;
 	}
 }
 
 @keyframes bonuss {
 	0% {
-		transform: translate(45px, -45px);
+		transform: translate(95px, -95px);
 	}
 
 	100% {
@@ -66,4 +74,45 @@ img {
 #bonus2 {
 	animation: bonuss 3s forwards;
 	display: inline-block;
+}
+
+@media only screen and (max-width: 650px) {
+	img {
+		width: 100px;
+		height: auto;
+	}
+
+	#bonus {
+		width: 100px;
+		height: auto;
+	}
+
+	#container {
+		width: 325px;
+		margin: 0 auto;
+	}
+
+	@keyframes bonus {
+		0% {
+			transform: rotate(0deg);
+			height: 10px;
+			width: auto;
+		}
+
+		100% {
+			transform: rotate(360deg);
+			height: 100px;
+			width: auto;
+		}
+	}
+
+	@keyframes bonuss {
+		0% {
+			transform: translate(45px, -45px);
+		}
+
+		100% {
+			transform: initial;
+		}
+	}
 }
