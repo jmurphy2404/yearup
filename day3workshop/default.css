@@ -27,9 +27,43 @@ img {
 
 #row4 {
 	animation: fadeIn 12s forwards;
+
 }
 
 #container {
 	width: 350px;
 	margin: 0 auto;
+}
+
+@keyframes bonus {
+	0% {
+		transform: rotate(0deg);
+		height: 10px;
+		width: auto;
+	}
+
+	100% {
+		transform: rotate(360deg);
+		height: 100px;
+		width: auto;
+	}
+}
+
+@keyframes bonuss {
+	0% {
+		transform: translate(45px, -45px);
+	}
+
+	100% {
+		transform: initial;
+	}
+}
+
+#bonus {
+	animation: bonus 3s forwards;
+}
+
+#bonus2 {
+	animation: bonuss 3s forwards;
+	display: inline-block;
 }
